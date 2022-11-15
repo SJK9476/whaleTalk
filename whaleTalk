@@ -1,0 +1,37 @@
+var input = 'Do you have a minute to talk about our Lord and Saviour, Moby Dick?';
+
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+var resultArray = [];
+
+for (let i = 0; i < input.length; i++) {
+    
+    const whaleTalk = input[i];
+
+    if ( whaleTalk === 'e') {
+        resultArray.push('e');
+
+    }
+
+    if (whaleTalk === 'u') {
+        resultArray.push('u');
+    }
+    
+    
+    for (let j = 0; j < vowels.length; j++) {
+
+        const translation = vowels[j];
+
+    if (whaleTalk === translation) {
+        resultArray.push(whaleTalk);
+    }
+        
+    }
+    
+};
+
+// console.log(resultArray);
+
+var resultString = resultArray.join("");
+
+console.log(resultString.toUpperCase());
